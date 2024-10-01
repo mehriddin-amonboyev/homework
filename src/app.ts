@@ -24,7 +24,7 @@ import { Category, CategoryModule } from '@modules';
             database: config.get('database.dbName'),
             models: [Category],
             synchronize: true,
-            sync:{force: true},
+            sync: { force: true },
             logging: console.log,
             autoLoadModels: true,
           };
@@ -36,4 +36,4 @@ import { Category, CategoryModule } from '@modules';
     CategoryModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }

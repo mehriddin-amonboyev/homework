@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import * as morgan from 'morgan';
 import { AppModule } from './app';
 
-async function bootstrap() {
+async function appStart() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get(ConfigService);
 
@@ -19,4 +19,4 @@ async function bootstrap() {
     console.log(`Listening on ${configService.get<number>('appConfig.port')}`);
   });
 }
-bootstrap();
+appStart();

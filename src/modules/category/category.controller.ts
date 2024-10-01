@@ -24,12 +24,11 @@ export class CategoryController {
   async createCategory(@Body() createCategoryPayload: CreateCategoryDto): Promise<void> {
     await this.#_service.createCategory(createCategoryPayload)
   }
-  @Put(':id')
-  async updateCategory(@Body() updateCategoryPayload: UpdateCategoryDto,@Param('id')){
-    await this.#_service.deleteCategory(categoryId)
+  // @Put(':id')
+  // async updateCategory(@Body() updateCategoryPayload: UpdateCategoryDto,@Param('id')){
+  //   await this.#_service.deleteCategory(categoryId)
 
-  }
-
+  // }
 
   @Delete(':id')
   async deleteCategory(@Param("id", ParseIntPipe) categoryId: number): Promise<void> {
